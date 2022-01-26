@@ -1,0 +1,61 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Fajitas",
+      "picture_url": "https://www.foodiecrush.com/wp-content/uploads/2020/06/Chicken-Fajitas-foodiecrush.com-008.jpg",
+      "cuisine": {
+        "name": "Mexican"
+      },
+      "ingredients": [
+        {"name": "2x tomatos"},
+        {"name": "2lbs beef"},
+        {"name": "2x flour torillas"},
+        {"name": "1x onion"}
+      ],
+      "directions": [
+        {"text": "Take stuff out."},
+        {"text": "Put stuff on stove."},
+        {"text": "Enjoy good food."}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Spaghetti",
+      "picture_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2021-12-spaghetti%2F211208_ApartmentTherapy_Spaghetti_0172",
+      "cuisine": {
+        "name": "Greek"
+      },
+      "ingredients": [
+        {"name": "2x tomatos"},
+        {"name": "2lbs beef"},
+        {"name": "2x flour torillas"},
+        {"name": "1x onion"}
+      ],
+      "directions": [
+        {"text": "Take stuff out."},
+        {"text": "Put stuff on stove."},
+        {"text": "Enjoy good food."}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Hotdogs",
+      "picture_url": "https://www.eatthis.com/wp-content/uploads/sites/4/2019/06/hot-dog-combinations-with-crazy-toppings.jpg?quality=82&strip=all",
+      "cuisine": {
+        "name": "American"
+      },
+      "ingredients": [
+        {"name": "2x tomatos"},
+        {"name": "2lbs beef"},
+        {"name": "2x flour torillas"},
+        {"name": "1x onion"}
+      ],
+      "directions": [
+        {"text": "Take stuff out."},
+        {"text": "Put stuff on stove."},
+        {"text": "Enjoy good food."}
+      ]
+    }
+  ]
+}
