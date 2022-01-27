@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [ recipes, setRecipes ] = useState([]);
+  const [ selectedCuisine, setCuisine ] = useState('All');
   const [ featuredRecipe, setFeaturedRecipe ] = useState({
         id: null,
         name: '',
@@ -45,13 +46,21 @@ function App() {
     setRecipes(updatedArr);
   }
 
+
+  const filteredRecipes = recipes.filter((r) => {
+    if (selectedCuisine === "All")
+      return true;
+    return r.cuisine.name.toLowerCase() === selectedCuisine.toLowerCase();
+  });
+
   return (
     <div>
       <Header />
+     
       <Switch>
-        <Route exact path="/recipes">
-          <SortSearchBar />
-          <CardContainer recipes={recipes} onDelete={onDelete} updateRecipes={updateRecipes}/>
+        <Route path="/recipes">
+          <SortSearchBar setCuisine={setCuisine}/>
+          <CardContainer recipes={filteredRecipes} onDelete={onDelete} updateRecipes={updateRecipes}/>
         </Route>
         <Route exact path="/about">
           <About/>
@@ -64,5 +73,6 @@ function App() {
     
   );
 }
+
 
 export default App;
