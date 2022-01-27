@@ -2,28 +2,21 @@ import Header from './components/Header';
 import Banner from './components/Banner';
 import SortSearchBar from './components/SortSearchBar';
 import CardContainer from './components/CardContainer';
+import About from './components/About';
 
 import { Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
   const [ recipes, setRecipes ] = useState([]);
-  let featuredRecipe = {
+  const [ featuredRecipe, setFeaturedRecipe ] = useState({
         id: null,
         name: '',
         picture_url: '',
         cuisine: '',
         directions: [],
         ingredients: []
-    }
-  // const [ featuredRecipe, setFeaturedRecipe ] = useState({
-  //       id: null,
-  //       name: '',
-  //       picture_url: '',
-  //       cuisine: '',
-  //       directions: [],
-  //       ingredients: []
-  //   })
+    })
 
   useEffect(() => {
   fetch("http://localhost:9292/recipes")
@@ -33,7 +26,7 @@ function App() {
 
   useEffect(() => {
       if (recipes.length !== 0) {
-        featuredRecipe = recipes[Math.floor(Math.random() * recipes.length)]
+        setFeaturedRecipe(recipes[Math.floor(Math.random() * recipes.length)])
       }
     }, [recipes]);
 
@@ -49,24 +42,26 @@ function App() {
         return recipe;
       }
     });
-    console.log("Updated Array: ", updatedArr)
     setRecipes(updatedArr);
   }
 
-  console.log('App: ', recipes)
-
   return (
-    <Switch>
-      <Route exact path="/recipes">
-        <Header />
-        <SortSearchBar />
-        <CardContainer recipes={recipes} onDelete={onDelete} updateRecipes={updateRecipes}/>
-      </Route>
-      <Route exact path="/">
-        <Header />
-        <Banner featuredRecipe={featuredRecipe}/>
-      </Route>
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route exact path="/recipes">
+          <SortSearchBar />
+          <CardContainer recipes={recipes} onDelete={onDelete} updateRecipes={updateRecipes}/>
+        </Route>
+        <Route exact path="/about">
+          <About/>
+        </Route>
+        <Route exact path="/">
+          <Banner featuredRecipe={featuredRecipe}/>
+        </Route>
+      </Switch>
+    </div>
+    
   );
 }
 

@@ -13,13 +13,18 @@ function Header() {
                         <NavLink
                             to="/" 
                             exact
-                            activeStyle={{
-                            textDecoration: "underline",
-                            }}> 
+                            > 
                         Home
                         </NavLink>
                     </li>
-                    <li><a href="#about">Our Philosophy</a></li>
+                    <li><NavLink
+                            to="/about" 
+                            exact
+                            activeStyle={{
+                            textDecoration: "underline",
+                            }}> 
+                        Our Philosophy
+                        </NavLink></li>
                 </ul>
                 <div id="nav-img-container">
                     <NavLink
