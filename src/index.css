@@ -89,11 +89,13 @@ nav ul {
   gap: 20px;
   padding: 150px;
   flex: 1 1 200px;
+  flex-wrap: wrap
 }
 
 /* Card */
 .card-container {
   border: 1px solid black;
+  flex: 1 0 30%
 }
 .card-img-container img {
   min-width: 300px;

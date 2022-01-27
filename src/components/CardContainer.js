@@ -1,19 +1,22 @@
 import Card from "./Card"
 
-function CardContainer({ recipes, onDelete }) {
+function CardContainer({ recipes, onDelete, updateRecipes }) {
+
+    console.log('Card Container: ', recipes)
+
     if (recipes.length !== 0) {
         return (
             <div id="cards-container">
                 {recipes.map(recipe => {
                     return (
-                        <Card key={recipe.id} recipe={recipe} onDelete={onDelete}/>
+                        <Card key={recipe.id} recipe={recipe} onDelete={onDelete} updateRecipes={updateRecipes}/>
                     )
                 })}
             </div>
         )
     }
     else {
-        return <p>Loading...</p>
+        return (<div></div>)
     }
 }
 

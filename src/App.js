@@ -8,14 +8,22 @@ import { useState, useEffect } from 'react';
 
 function App() {
   const [ recipes, setRecipes ] = useState([]);
-  const [ featuredRecipe, setFeaturedRecipe ] = useState({
+  let featuredRecipe = {
         id: null,
         name: '',
         picture_url: '',
         cuisine: '',
         directions: [],
         ingredients: []
-    })
+    }
+  // const [ featuredRecipe, setFeaturedRecipe ] = useState({
+  //       id: null,
+  //       name: '',
+  //       picture_url: '',
+  //       cuisine: '',
+  //       directions: [],
+  //       ingredients: []
+  //   })
 
   useEffect(() => {
   fetch("http://localhost:9292/recipes")
@@ -25,7 +33,7 @@ function App() {
 
   useEffect(() => {
       if (recipes.length !== 0) {
-        setFeaturedRecipe(recipes[Math.floor(Math.random() * recipes.length)])
+        featuredRecipe = recipes[Math.floor(Math.random() * recipes.length)]
       }
     }, [recipes]);
 
@@ -33,12 +41,26 @@ function App() {
     setRecipes(recipes.filter(recipe => recipe.id !== recipeToDeleteId));
   }
 
+  function updateRecipes(updatedRecipe) {
+    const updatedArr = recipes.map(recipe => {
+      if (recipe.id === updatedRecipe.id) {
+        return updatedRecipe;
+      } else {
+        return recipe;
+      }
+    });
+    console.log("Updated Array: ", updatedArr)
+    setRecipes(updatedArr);
+  }
+
+  console.log('App: ', recipes)
+
   return (
     <Switch>
       <Route exact path="/recipes">
         <Header />
         <SortSearchBar />
-        <CardContainer recipes={recipes} onDelete={onDelete}/>
+        <CardContainer recipes={recipes} onDelete={onDelete} updateRecipes={updateRecipes}/>
       </Route>
       <Route exact path="/">
         <Header />
