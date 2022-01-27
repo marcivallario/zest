@@ -17,7 +17,6 @@ function App() {
         ingredients: []
     })
 
-
   useEffect(() => {
   fetch("http://localhost:9292/recipes")
     .then((r) => r.json())
@@ -30,12 +29,16 @@ function App() {
       }
     }, [recipes]);
 
+  function onDelete(recipeToDeleteId) {
+    setRecipes(recipes.filter(recipe => recipe.id !== recipeToDeleteId));
+  }
+
   return (
     <Switch>
       <Route exact path="/recipes">
         <Header />
         <SortSearchBar />
-        <CardContainer recipes={recipes}/>
+        <CardContainer recipes={recipes} onDelete={onDelete}/>
       </Route>
       <Route exact path="/">
         <Header />

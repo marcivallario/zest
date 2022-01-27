@@ -88,11 +88,22 @@ nav ul {
   justify-content: center;
   gap: 20px;
   padding: 150px;
+  flex: 1 1 200px;
 }
 
 /* Card */
+.card-container {
+  border: 1px solid black;
+}
 .card-img-container img {
   min-width: 300px;
   height: 300px;
   object-fit:cover;
+}
+
+.trash {
+  width:10%;
+  float: right;
+  margin-top: 20px;
+  cursor: pointer;
 }

@@ -1,4 +1,13 @@
-function Card({ recipe }) {
+import trashcan from '../assets/trashcan.png'
+
+function Card({ recipe, onDelete }) {
+
+    function handleDelete() {
+        fetch(`http://localhost:9292/recipes/${recipe.id}`, {
+            method: 'DELETE'
+            })
+        .then(onDelete(recipe.id));
+    }
 
     return (
         <div className="card-container">
@@ -14,6 +23,7 @@ function Card({ recipe }) {
                 <ol>
                     {recipe.directions.map(direction => <li key={direction.id}>{direction.text}</li>)}
                 </ol>
+                <img className="trash" src={trashcan} title="Delete recipe" onClick={handleDelete}/>
                 
             </div>
         </div>
