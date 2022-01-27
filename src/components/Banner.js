@@ -1,10 +1,19 @@
-import About from "./About"
+import bannerimg from "../assets/bannerimg.png";
 
 function Banner({ featuredRecipe }) {
     return (
         <div id="home">
             <div id="banner-container">
-                
+                <div id="banner-content">
+                    <div id="banner-text">
+                        <h1>good food, 
+                        <br />
+                        good mood.</h1>
+                    </div>
+                    <div id="banner-img-container">
+                        <img src={bannerimg} alt="Vegetables"/>
+                    </div>
+                </div>
             </div>
             <div id="rotd-container">
                 <div id="rotd-content">
@@ -27,7 +36,7 @@ function Banner({ featuredRecipe }) {
                             </div>
                         </div>
                     </div>
-                    <div id="banner-img-container">
+                    <div id="rotd-img-container">
                         <img src={featuredRecipe.picture_url} alt="Receipe of the Day" title="Recipe of the Day" />
                     </div>
                 </div>

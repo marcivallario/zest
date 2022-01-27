@@ -1,11 +1,10 @@
 function About() {
     return (
         <div id="about">
-                <h2>Explore your pantry with curated dishes.</h2>
-                <p>At Zest, we believe taste trumps all. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum neque egestas congue quisque egestas diam in. Quam elementum pulvinar etiam non quam. Quis commodo odio aenean sed. Augue neque gravida in fermentum et sollicitudin ac orci. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Commodo ullamcorper a lacus vestibulum. Eu tincidunt tortor aliquam nulla facilisi. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. At tellus at urna condimentum mattis pellentesque. Id porta nibh venenatis cras sed. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Quisque id diam vel quam. Pretium aenean pharetra magna ac placerat vestibulum.</p>
+                <h2>Explore your pantry with recipes curated to perfection.</h2>
+                <p>At Zest, we believe taste trumps all. Whether you're a beginner — new to the kitchen and all its appliances &#38; tools — or a seasoned chef with a fascination for the simple pleasures, Zest is your go-to one-stop-shop for all things essential. We believe that you don't have to hop on a plane to explore all corners of the earth. Your expedition begins right in your pantry: spices the Middle East, fresh feta cheese from the Mediterranean, or even a solid hot dog to celebrate an American past-time. </p>
                 <br></br>
-                <p>Facilisi etiam dignissim diam quis enim lobortis. Etiam sit amet nisl purus. Amet nisl purus in mollis nunc. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Morbi tristique senectus et netus et. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Diam vulputate ut pharetra sit amet aliquam id diam. Consectetur purus ut faucibus pulvinar elementum integer. Placerat orci nulla pellentesque dignissim enim. Leo in vitae turpis massa sed elementum tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
-    
+                <p>Our curated recipes are chosen by a select council of tastemakers with their pulse on varying cuisine trends. Save yourself the rabbit hole of the internet and the frustrations &#38; tears that come with preparing a meal from scratch. Allow those who've studied not only the culinary arts, but the cultures these dishes come from to guide you through a tour of your tastebuds without ever having to leave your hometown. Instructions are written with you in mind: easy to follow, straightforward, with no special chef-skills needed. Authentic, easy, and most importantly--delicious. </p>
             </div>
     )
 }
