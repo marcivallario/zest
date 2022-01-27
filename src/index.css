@@ -92,7 +92,7 @@ nav ul a.active {
   margin-top: 50px;
 }
 
-#sort-bar-list li {
+#sort-bar-list button {
   background-color: #b8362f;
   width: 100px;
   text-align: center;
