@@ -31,27 +31,37 @@ function Card({ recipe, onDelete, updateRecipes }) {
                 <img src={recipe.picture_url}/>
             </div>
             <div className="card-details">
-                <h2>{recipe.name}</h2>
-                <h4>{recipe.cuisine.name}</h4>
-                <h6>Ingredients</h6>
-                {recipe.ingredients.map(ingredient => {
-                    return (<li key={ingredient.id}>{recipe.ingredient_lists.find(list => list.ingredient_id === ingredient.id).quantity}{ingredient.name}</li>)
-                })}
-                <ol>
-                    {recipe.directions.map(direction => <li key={direction.id}>{direction.text}</li>)}
-                </ol>
-                <div>
-                    <label>Rating: </label>
-                    <select value={recipe.rating} name="rating" onChange={handleChange}>
-                        <option value={1}>⭐</option>
-                        <option value={2}>⭐⭐</option>
-                        <option value={3}>⭐⭐⭐</option>
-                        <option value={4}>⭐⭐⭐⭐</option>
-                        <option value={5}>⭐⭐⭐⭐⭐</option>
-                    </select>
+                <div className="recipe-details">
+                    <div className="titles">
+                        <h2>{recipe.name}</h2>
+                        <h4>{recipe.cuisine.name}</h4>
                     </div>
-                <img className="trash" src={trashcan} title="Delete recipe" onClick={handleDelete}/>
-                
+                    <div className="card-options">
+                        <div className="rating">
+                            <label>Rating: </label>
+                        <select value={recipe.rating} name="rating" onChange={handleChange}>
+                            <option value={1}>⭐</option>
+                            <option value={2}>⭐⭐</option>
+                            <option value={3}>⭐⭐⭐</option>
+                            <option value={4}>⭐⭐⭐⭐</option>
+                            <option value={5}>⭐⭐⭐⭐⭐</option>
+                        </select>
+                        </div>
+                        <img className="trash" src={trashcan} title="Delete recipe" onClick={handleDelete}/>
+                    </div>
+                    <div className="ingredients">
+                        <h6>Ingredients</h6>
+                    {recipe.ingredients.map(ingredient => {
+                        return (<li key={ingredient.id}>{recipe.ingredient_lists.find(list => list.ingredient_id === ingredient.id).quantity}{ingredient.name}</li>)
+                    })}
+                    </div>
+                    <div className="instructions">
+                        <h6>Directions</h6>
+                        <ol>
+                            {recipe.directions.map(direction => <li key={direction.id}>{direction.text}</li>)}
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
     )
