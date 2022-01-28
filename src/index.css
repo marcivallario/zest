@@ -214,11 +214,20 @@ nav ul a.active {
 
 /* Card */
 .card-container {
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 10px 5px 20px rgb(182, 182, 182);
   flex: 1 0 30%;
   max-width: 400px;
   border-radius: 20px;
+  background-color: white;
 }
+
+.card-details {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0 20px 20px 20px;
+}
+
 .card-img-container {
   width: 100%;
 }
@@ -229,9 +238,92 @@ nav ul a.active {
   border-radius: 20px 20px 0 0;
 }
 
+.recipe-details {
+  margin-top: -40px;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+}
+
+.titles {
+  padding: 5px;
+  margin: 0 50px;
+  background-color: #EABB48;
+  border-radius: 20px;
+  position: relative;
+  height: 120px;
+  /* bottom: 30px; */
+  transform: translate(0%, -20%);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.titles h2, h4{
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.titles h4 {
+  font-style: italic;
+  color: grey;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-options label {
+  font-style: italic;
+  font-size: 14px;
+  color: grey;
+}
+
+select {
+
+  padding-right: 10px;
+  border: none;
+  border-radius: 15px;
+  height: 30px;
+}
+
 .trash {
-  width:10%;
-  float: right;
-  margin-top: 20px;
+  width:5%;
   cursor: pointer;
 }
+
+.recipe-details h6 {
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 0 10px 0;
+}
+
+.recipe-details h6:before {
+    content: "_____";
+    color: #ACBC71;
+    position: relative;
+    top: -5px;
+    left: -45px;
+}
+
+.recipe-details h6:after {
+    content: "_____";
+    color: #ACBC71;
+    position: relative;
+    top: -5px;
+    right: -45px;
+}
+
+.instructions ol {
+  padding: 0 20px 20px 20px;
+}
+
+.instructions li {
+    margin-bottom: 15px;
+}
+
