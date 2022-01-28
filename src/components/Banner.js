@@ -37,7 +37,7 @@ function Banner({ featuredRecipe }) {
                         </div>
                     </div>
                     <div id="rotd-img-container">
-                        <img src={featuredRecipe.picture_url} alt="Receipe of the Day" title="Recipe of the Day" />
+                        <img src={featuredRecipe.picture_url} alt="Recipe of the Day" title="Recipe of the Day" />
                     </div>
                 </div>
             </div>
