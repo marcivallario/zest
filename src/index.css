@@ -209,7 +209,7 @@ nav ul a.active {
   gap: 20px;
   padding: 75px 150px;
   flex: 1 1 200px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 } 
 
 /* Card */
@@ -217,14 +217,16 @@ nav ul a.active {
   box-shadow: 10px 5px 5px grey;
   flex: 1 0 30%;
   max-width: 400px;
+  border-radius: 20px;
 }
 .card-img-container {
-  width: 100%
+  width: 100%;
 }
 .card-img-container img {
   width: 400px;
   height: 400px;
   object-fit:cover;
+  border-radius: 20px 20px 0 0;
 }
 
 .trash {
