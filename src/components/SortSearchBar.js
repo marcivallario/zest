@@ -13,7 +13,7 @@ function SortSearchBar({ setCuisine } )
         <div id="sort-bar">
             <div id="sort-bar-list">
                 {cuisineA.map((c) =>
-                   <NavLink key={c.index} to={`/recipes/${c}`}><button value = {c} onClick={(e)=>handleClick(e)}>{c}</button></NavLink>
+                   <NavLink key={c} to={`/recipes/${c}`}><button value = {c} onClick={(e)=>handleClick(e)}>{c}</button></NavLink>
                 )}
             </div>
         </div>

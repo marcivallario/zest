@@ -23,8 +23,6 @@ function Card({ recipe, onDelete, updateRecipes }) {
         .then(updateRecipes);
     }
 
-    console.log('Card: ', recipe)
-
     return (
         <div className="card-container">
             <div className="card-img-container">

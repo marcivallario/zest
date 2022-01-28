@@ -1,9 +1,6 @@
 import Card from "./Card"
 
 function CardContainer({ recipes, onDelete, updateRecipes }) {
-
-    console.log('Card Container: ', recipes)
-
     if (recipes.length !== 0) {
         return (
             <div id="cards-container">
